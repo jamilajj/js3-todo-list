@@ -7,8 +7,9 @@
 
     function add() {
        
-        if (!todo.includes(inp.value) )
-        todo.push(inp.value);
+        if (!todo.includes(inp.value)&&(inp.value!="") ){
+            todo.push(inp.value);
+        }
       
         inp.value = '';
 
@@ -18,8 +19,6 @@
         for (let item of todo) {
             data += `<li class="list-group-item"> ${item} </li>`
         }
-
-
 
 
         list.innerHTML = data;
